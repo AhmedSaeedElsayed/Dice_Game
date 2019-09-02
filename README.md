@@ -2,6 +2,10 @@
 
 A new Flutter project.
 
+# Screenshot
+
+![Screenshot_2019-09-02-16-21-40-138_com example dice_game](https://user-images.githubusercontent.com/39589782/64120961-df371780-cd9d-11e9-9c50-5925bfac32bc.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
