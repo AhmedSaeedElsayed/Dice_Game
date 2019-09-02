@@ -28,6 +28,13 @@ class _DicePageState extends State<DicePage> {
   int LeftDiceNumber = 1;
   int RightDiceNumber = 1;
 
+  void ChangeDiceFace() {
+    setState(() {
+      LeftDiceNumber = Random().nextInt(6) + 1;
+      RightDiceNumber = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -37,10 +44,7 @@ class _DicePageState extends State<DicePage> {
             padding: const EdgeInsets.only(top: 80.0),
             child: InkWell(
               onTap: () {
-                setState(() {
-                  LeftDiceNumber = Random().nextInt(6) + 1;
-                  RightDiceNumber = Random().nextInt(6) + 1;
-                });
+                ChangeDiceFace();
               },
               child: Icon(
                 Icons.loop,
@@ -56,17 +60,13 @@ class _DicePageState extends State<DicePage> {
                 Expanded(
                     child: InkWell(
                         onTap: () {
-                          setState(() {
-                            LeftDiceNumber = Random().nextInt(6) + 1;
-                          });
+                          ChangeDiceFace();
                         },
                         child: Image.asset("images/$LeftDiceNumber.png"))),
                 Expanded(
                     child: InkWell(
                         onTap: () {
-                          setState(() {
-                            RightDiceNumber = Random().nextInt(6) + 1;
-                          });
+                          ChangeDiceFace();
                         },
                         child: Image.asset("images/$RightDiceNumber.png"))),
               ],
